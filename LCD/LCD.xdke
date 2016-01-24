@@ -1,0 +1,90 @@
+{
+  "project": {
+    "projectSettingsVersion": "2.0.0",
+    "initialAutoPluginCount": 0,
+    "currentBuildConfiguration": null,
+    "projectFiles": {},
+    "projectDirectories": {}
+  },
+  "iot-tab": {
+    "fileStatus": {
+      "icon.png": {
+        "previousModTime": 1453527035986,
+        "modified": 1453527035986,
+        "seen": true,
+        "name": "icon.png"
+      },
+      "lcd.js": {
+        "previousModTime": 1453527035986,
+        "modified": 1453527035986,
+        "seen": true,
+        "name": "lcd.js"
+      },
+      "LCD.xdk": {
+        "previousModTime": 1453527036286,
+        "modified": 1453527036286,
+        "seen": true,
+        "name": "LCD.xdk"
+      },
+      "LCD.xdke": {
+        "previousModTime": 1453616284870,
+        "modified": 1453616284870,
+        "seen": true,
+        "name": "LCD.xdke"
+      },
+      "main.js": {
+        "previousModTime": 1453530253144,
+        "modified": 1453530253144,
+        "seen": true,
+        "name": "main.js"
+      },
+      "package.json": {
+        "previousModTime": 1453527035998,
+        "modified": 1453527035998,
+        "seen": true,
+        "name": "package.json"
+      },
+      "README.md": {
+        "previousModTime": 1453527035998,
+        "modified": 1453527035998,
+        "seen": true,
+        "name": "README.md"
+      },
+      "xdk/project-info.json": {
+        "previousModTime": 1453527036254,
+        "modified": 1453527036254,
+        "seen": true,
+        "name": "xdk/project-info.json"
+      },
+      "customLCD.js": {
+        "previousModTime": 1453616282775,
+        "modified": 1453616282775,
+        "seen": true,
+        "name": "customLCD.js"
+      }
+    },
+    "boardFileStatus": {
+      "icon.png": {
+        "previousModTime": 1453618233001
+      },
+      "lcd.js": {
+        "previousModTime": 1453618233001
+      },
+      "main.js": {
+        "previousModTime": 1453618233001
+      },
+      "package.json": {
+        "previousModTime": 1453618233001
+      },
+      "README.md": {
+        "previousModTime": 1453618233001
+      },
+      "xdk/project-info.json": {
+        "previousModTime": 1453618233001
+      },
+      "customLCD.js": {
+        "previousModTime": 1453618233001
+      }
+    }
+  }
+}
