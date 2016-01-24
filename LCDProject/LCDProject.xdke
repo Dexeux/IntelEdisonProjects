@@ -21,14 +21,14 @@
         "name": "LCDProject.xdk"
       },
       "LCDProject.xdke": {
-        "previousModTime": 1453659436032,
-        "modified": 1453659436032,
+        "previousModTime": 1453660774095,
+        "modified": 1453660774095,
         "seen": true,
         "name": "LCDProject.xdke"
       },
       "main.js": {
-        "previousModTime": 1453659486574,
-        "modified": 1453659486574,
+        "previousModTime": 1453660785712,
+        "modified": 1453660785712,
         "seen": true,
         "name": "main.js"
       },
@@ -49,11 +49,17 @@
         "modified": 1453616382183,
         "seen": true,
         "name": "xdk/project-info.json"
+      },
+      "mai.xdke": {
+        "previousModTime": 1453660348007,
+        "modified": 1453660348007,
+        "seen": true,
+        "name": "mai.xdke"
       }
     },
     "boardFileStatus": {
       "main.js": {
-        "previousModTime": 1453659488397
+        "previousModTime": 1453660786566
       }
     }
   }

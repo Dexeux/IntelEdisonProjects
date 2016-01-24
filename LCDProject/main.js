@@ -10,11 +10,12 @@ console.log("The current mraa version is: " + version);
 //Preset settings for the color wheel
 var settings = {
     ambient:[255,125,0,1,1,1],
+    absurd:[50,125,255,1,0,1],
     normal:[0,0,0,1,1,1]
 }
    
 //Use Ump to program it
-useUmp();
+useUmp(settings.absurd);
 
 //Setup the LCD screen and write to it
 function useUmp(setting) {
@@ -45,11 +46,15 @@ function  loopColors(display,input){
         greengrow = changeGrow(green,greengrow);
         bluegrow = changeGrow(blue,bluegrow);
         display.setColor(red,green,blue);
-        display.clear();
-        display.setCursor(0,0);
-        display.write('Red:' + red);
-        display.setCursor(1,0);
-        display.write('Blue: ' + blue);
+        //display.clear();
+        //display.setCursor(0,0);
+        //display.write('Red: ' + red);
+        //display.setCursor(0,10);
+        //display.write('Green:');
+        //display.setCursor(1,10);
+        //display.write(green+' ');
+        //display.setCursor(1,0);
+        //display.write('Blue: ' + blue);
     },10);
 };
 
