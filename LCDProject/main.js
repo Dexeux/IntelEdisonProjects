@@ -1,6 +1,8 @@
 //Christophe Gaboury
 //https://github.com/Dexeux
 //LCD Edison Program
+//Includes LCD and temperature sensor
+//LCD in I2C pin and Temp sensor on A0 pin
 
 //Get the mraa version
 var mraa = require('mraa');
@@ -11,7 +13,8 @@ console.log("The current mraa version is: " + version);
 var settings = {
     ambient:[255,125,0,1,1,1],
     absurd:[50,125,255,1,0,1],
-    normal:[0,0,0,1,1,1]
+    normal:[0,0,0,1,1,1],
+    off:[0,0,0,3,3,3]
 }
    
 //Use Ump to program it
@@ -19,17 +22,24 @@ useUmp(settings.absurd);
 
 //Setup the LCD screen and write to it
 function useUmp(setting) {
+    //initialize the lcd
     var LCD = require('jsupm_i2clcd');
     var display = new LCD.Jhd1313m1(6, 0x3E, 0x62);
-    display.write('Christophe');
+    //intitialize the temperature sensor and get an initial temperature reading
+    var tempSensor = require('jsupm_grove');
+    var temp = new tempSensor.GroveTemp(0);
+    var tempvalue = temp.value();
+    display.write('Temperature :');
     display.setCursor(1,0);
-    display.write('Gaboury');
-    loopColors(display,setting);
+    display.write(tempvalue + ' Celsius');
+    loopColors(display,setting,temp);
+    
     
 };
  
-//Write the colors to the LCD screen    
-function  loopColors(display,input){
+//Write the colors to the LCD screen 
+var counter = 0
+function  loopColors(display,input,temp){
     var stopper = true;
     var red = input[0];
     var green = input[1];
@@ -46,15 +56,25 @@ function  loopColors(display,input){
         greengrow = changeGrow(green,greengrow);
         bluegrow = changeGrow(blue,bluegrow);
         display.setColor(red,green,blue);
-        //display.clear();
-        //display.setCursor(0,0);
-        //display.write('Red: ' + red);
-        //display.setCursor(0,10);
-        //display.write('Green:');
-        //display.setCursor(1,10);
-        //display.write(green+' ');
-        //display.setCursor(1,0);
-        //display.write('Blue: ' + blue);
+        /*  Display the color combination
+        display.clear();
+        display.setCursor(0,0);
+        display.write('Red: ' + red);
+        display.setCursor(0,10);
+        display.write('Green:');
+        display.setCursor(1,10);
+        display.write(green+' ');
+        display.setCursor(1,0);
+        display.write('Blue: ' + blue);
+        */
+        //Test the temperature every 10 loops
+        if (counter==10){
+            var currenttemp = temp.value();
+            display.setCursor(1,0);
+            display.write(currenttemp + ' Celsius      ');
+            counter=0;
+        };
+        counter+=1
     },10);
 };
 
