@@ -1,0 +1,6 @@
+/*jslint node:true, vars:true, bitwise:true, unparam:true */
+/*jshint unused:true */
+// Leave the above lines for propper jshinting
+//Type Node.js Here :)
+
+//This is testing the various syntax given in this libraru
